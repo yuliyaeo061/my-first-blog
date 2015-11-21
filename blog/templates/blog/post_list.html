@@ -9,7 +9,15 @@
           <em>К тому же местами курсивом </em>
           <strong>или даже жирным шрифтом, <br /> с переносом в новую строку.</strong>
             <a href="http://djangogirls.org">Ссылки тоже в наличии.</a>
-
+          <div>
+            {% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaks }}</p>
+                </div>
+            {% endfor %}
+          </div>
           <div>
             <p> Воотс...</p>
           </div>
